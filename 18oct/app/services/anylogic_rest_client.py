@@ -10,7 +10,9 @@ logger = logging.getLogger(__name__)
 
 class AnyLogicRESTClient:
     def __init__(self) -> None:
-        self.api_key = os.getenv("ANYLOGIC_API_KEY", "e05a6efa-ea5f-4adf-b090-ae0ca7d16c20")
+        self.api_key = os.getenv("ANYLOGIC_API_KEY")
+        if not self.api_key:
+            raise ValueError("ANYLOGIC_API_KEY environment variable is required")
         self.base_url = "https://cloud.anylogic.com/api/open/8.5.0"
         self.headers = {
             "Authorization": self.api_key,

@@ -6,7 +6,9 @@ from fastapi import HTTPException
 
 def get_cloud_client() -> CloudClient:
     """Возвращает экземпляр клиента AnyLogic Cloud."""
-    api_key = os.getenv("ANYLOGIC_API_KEY", "e05a6efa-ea5f-4adf-b090-ae0ca7d16c20")
+    api_key = os.getenv("ANYLOGIC_API_KEY")
+    if not api_key:
+        raise ValueError("ANYLOGIC_API_KEY environment variable is required")
     try:
         return CloudClient(api_key)
     except Exception as exc:
