@@ -1,0 +1,41 @@
+.product-page {
+  padding: 20px;
+}
+
+.product-details {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.product-price {
+  font-size: 1.5em;
+  color: #28a745;
+  font-weight: bold;
+}
+
+.product-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.buy-button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buy-button:hover {
+  background-color: #218838;
+}
+
+.product-not-found {
+  color: #dc3545;
+}

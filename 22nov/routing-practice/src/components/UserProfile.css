@@ -1,0 +1,37 @@
+.user-profile {
+  padding: 20px;
+}
+
+.user-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f9f9f9;
+}
+
+.user-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.action-link, .back-link {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.action-link:hover, .back-link:hover {
+  background-color: #0056b3;
+}
+
+.user-not-found {
+  color: #d9534f;
+}
